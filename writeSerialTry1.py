@@ -1,6 +1,6 @@
 import time
 import serial
-from xbee from XBee, ZigBee
+from xbee import XBee
 ser = serial.Serial( 
         port='/dev/ttyAMA0',
         baudrate=9600,
@@ -8,7 +8,7 @@ ser = serial.Serial(
         stopbits=serial.STOPBITS_ONE,
         bytesize=serial.EIGHTBITS
 )
-xbeeDevicesMacAddress = {'CATMAN2':0013A200415A8686,'CATMAN1':0013A2004104746F}
+xbeeDevicesMacAddress = {'CATMAN2':'0013A200415A8686','CATMAN1':'0013A2004104746F'}
 
 ser.isOpen()
 

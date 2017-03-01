@@ -27,9 +27,8 @@ while 1:
 ser.close()
 
 "create a function to "
-def main:
-    try:
-        xbee.send(frame='A',command='MY') #possibly required correct frame or modification within the device itself
-        while(xbee.wait_read_frame()):
-            print("") 
-        
+
+#try:
+ #   xbee.send(frame='A',command='MY') #possibly required correct frame or modification within the device itself
+    #while(xbee.wait_read_frame()):
+       # print("waiting")         
