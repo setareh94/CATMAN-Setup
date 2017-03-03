@@ -1,0 +1,37 @@
+Hello, 
+
+If youre reading this then Doyle probably just told you "hey, you should go work on the GPS"...
+
+Lucky you.
+
+So here's the scoop, basically you have to ensure that the following steps have been completed:
+
+(note that this is for using UART instead of USB)
+
+1. edit the boot file:
+	>> sudo nano /boot/cmdline.txt
+
+then make sure to change:
+	dwc_otg.1pm_enable=0 console+ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+
+and change it to:
+	dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+
+Note that this means you just have to remove:
+	console=ttyAMA0,115200 and if you see console=serial0,115200 remove that too.
+
+2. now reboot the pi using:
+	sudo reboot
+
+3. Now you have to hardwire the gpsd thing with:
+	>> sudo killall gpsd
+	>> sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock
+
+4. then you should be able to run the GPS with:
+	>> cgps -s
+
+note that the gps will blink every second if it's NOT connected, and then blink every 15
+seconds if it is connected.
+
+
+good luck kiddo.

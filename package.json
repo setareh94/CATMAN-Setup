@@ -1,0 +1,21 @@
+{
+  "name": "catman",
+  "version": "1.0.0",
+  "description": "testing xbee",
+  "main": "dudum.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node /home/pi/catman-setup/four.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/setareh94/catman-setup.git"
+  },
+  "author": "setareh lotfi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/setareh94/catman-setup/issues"
+  },
+  "homepage": "https://github.com/setareh94/catman-setup#readme"
+}
