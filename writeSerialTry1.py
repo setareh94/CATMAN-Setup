@@ -1,6 +1,7 @@
+#!/usr/bin/env python
 import time
 import serial
-from xbee from XBee, ZigBee
+from xbee import XBee, ZigBee
 ser = serial.Serial( 
         port='/dev/ttyAMA0',
         baudrate=9600,
@@ -8,7 +9,7 @@ ser = serial.Serial(
         stopbits=serial.STOPBITS_ONE,
         bytesize=serial.EIGHTBITS
 )
-xbeeDevicesMacAddress = {'CATMAN2':0013A200415A8686,'CATMAN1':0013A2004104746F}
+xbeeDevicesMacAddress = {'CATMAN2':'0013A200415A8686','CATMAN1':'0013A2004104746F'}
 
 ser.isOpen()
 
@@ -30,15 +31,18 @@ while 1 :
 
         if out != '':
             print(">>" + out)
+def __init__(self,*args,**kwargs):
+    super(DigiMesh, self).__init__(*args,**kwargs)
+    print("Initizing %s",DigiMesh)
 
-def connection:
+def connection():
     #open the port
     ser = serial.Serial(port, baudrate, byteSize = 8, parity = 'N', stopbits = 1, timeout = None, xonxoff =1, dsrdtr = 1)
 
     #Create our API object
 
     xbee = ZigBee (ser, escape = True)
-    DEST_ADDR_Serial = 
+    DEST_ADDR_Serial = None
     h = ["","","NA","NA"]
 
     MessageTable= {}
@@ -47,5 +51,9 @@ def connection:
     for i in DEST_ADDR_LONG:
         if (Success):
             MessageTable[i] = True
+    #for key, value in xbeeDevicesMacAddress.iteritems:
+        
+
+        
 
     
