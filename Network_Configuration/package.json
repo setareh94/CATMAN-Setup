@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "node /home/pi/catman-setup/four.js"
+    "test": "node /home/pi/catman-setup/Network_Configuration/init_network.js"
   },
   "repository": {
     "type": "git",
