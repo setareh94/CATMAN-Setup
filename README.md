@@ -2,7 +2,7 @@
 
 #### Concept
 
-![alt text](http://imgur.com/a/CwNsh)
+![alt text](https://github.com/setareh94/CATMAN-Setup/blob/master/docs/concept.png "diagram")
 
 #### Initalization
 
