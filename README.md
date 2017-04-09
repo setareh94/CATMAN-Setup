@@ -49,3 +49,9 @@ Or config here
 ```
 /etc/default/gpsd
 ```
+
+Installing node-modules:
+```
+cp -r CATMAN-setup/node-modules /opt/nodejs/lib/
+```
+
