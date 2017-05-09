@@ -1,5 +1,5 @@
 'use strict';
-var Xbee = require('/opt/nodejs/lib/node_modules/digimesh');
+var Xbee = require('./digimesh');
 
 var xbee = new Xbee({ device: '/dev/serial0', baud: 9600 }, function() {
 	    console.log('xbee is ready');

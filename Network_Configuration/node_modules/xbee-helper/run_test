@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# run jasmine-node test
+#
+
+jasmine-node ./test --watch ./src --color

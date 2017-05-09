@@ -15,7 +15,7 @@ GYR = []
 MAG = []
 t =[]
 l = 0
-while l < 1000:
+while l < 10:
 	ACC = imu.rawAccel()
 	GYR = imu.rawGyro()
 	MAG = imu.rawMag()
